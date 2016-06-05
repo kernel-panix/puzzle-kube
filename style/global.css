@@ -1,0 +1,108 @@
+body {
+    color:#ccc;
+    background:#333 url('http://bigbackground.com/wp-content/uploads/2013/06/colorful-space-background.jpg');
+    background-size:cover;
+    text-shadow:1px 1px 1px #000;
+    /* prefixes are currently needed for these to function properly when the document is rendered */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px 2px #000;
+}
+
+.container {
+    width: 40vw;
+    height: 40vw;
+    position: relative;
+    perspective: 1000px;
+    background:rgba(255,255,255,0.1);
+    perspective-origin: -25% -200px;
+    margin:0;
+    padding:15vw;
+}
+#cube {
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+#cube > div {
+    width: 30vw;
+    height: 30vw;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    position: absolute;
+    background: url('http://www.freewallpaperfullhd.com/wp-content/uploads/2015/01/Space-Wallpaper-HD-2560x14401.jpg');
+    bacgkround-size: contain;
+    background-position: center center;
+    /* Here's where you set the opacity */
+    opacity: .75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    border-radius: 2vw;
+}
+#cube > div:first-child {
+    transform: rotateX(90deg) translateZ(15vw);
+}
+#cube > div:nth-child(2) {
+    transform: translateZ(15vw);
+}
+#cube > div:nth-child(3) {
+    transform: rotateY(90deg) translateZ(15vw);
+}
+#cube > div:nth-child(4) {
+    transform: rotateY(180deg) translateZ(15vw);
+}
+#cube > div:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(15vw);
+}
+#cube > div:nth-child(6) {
+    transform: rotateX(-90deg) rotate(180deg) translateZ(15vw);
+}
+
+div[id^="face"] {
+    border:0.5vw solid #000;
+}
+
+.tile {
+    color:#000;
+    display:flex;
+    border:.25vw solid #000;
+    width:30%;
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 0.5vw;
+    flex-grow:1;
+    justify-content:center;
+    align-items:center;
+    text-decoration:underline;
+    font-size:2.5vw;
+}
+.tile.red {
+    background:rgba(255, 0, 0, 0.6);
+}
+.tile.white {
+    background:rgba(255, 255, 255, 0.6);
+}
+.tile.yellow {
+    background:rgba(255, 255, 0, 0.6);
+}
+.tile.blue {
+    background:rgba(0, 0, 255, 0.6);
+}
+.tile.green {
+    background:rgba(0, 255, 0, 0.6);
+}
+.tile.orange {
+    background:rgba(255, 165, 0, 0.6);
+}
+
+.active {
+    box-shadow: inset 0 0 2vw rgb(255,255,0);
+}

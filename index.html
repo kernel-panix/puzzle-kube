@@ -1,0 +1,32 @@
+<html>
+<head>
+	<script src="scripts/main.js"></script>
+	<link rel="stylesheet" href="style/global.css">
+</head>
+<body>
+<div id="controls">
+    <label>Difficulty:</label>
+    <input type="range" min="2" max="7" step="1" value="3" id="difficulty-slider"><span id="difficulty-value"></span>
+        <div title="Adds numbers to tiles for easier itentification."><input type="checkbox" class="colorblind"><label>Orientation indicators/Colorblind mode?</label></div>
+       <div title="Prevents unintentional text selection."><input type="checkbox" class="select-text" checked><label>Unselectable Text?</label></div>
+</div>
+<section class="container">
+    <div id="cube"></div>
+</section>
+<div>
+     <h1>Explanation:</h1>
+
+    <p>Currently working on a playable Rubik's Cube in CSS3/Javascript. After I get it fully functional, I'd like to add an auto-solving AI to the mix. I've been wanting to try my hand at this since I saw a team at The Nerdery in Chicago make one of these out for Google about 6 months ago.</p>
+     <h2>Planned Features</h2>
+
+    <ul>
+        <li><s>Arrow keys to rotate the cube, and </s>WASDQE for various rotation types. <s>Ideally, I'll be switching over to mouse controls though.</s></li>
+        <li><s>Color-blind assistance mode via numbered colors. (As currently in the mock-up's primary face.)</s></li>
+        <li><s>Cube difficulty ranging from 2-7, the default being 3.</s></li>
+        <li>Cube auto-save so you can come back to it later.</li>
+        <li>Auto-scamble from solved state.</li>
+        <li>Auto-solve AI.</li>
+    </ul>
+</div>
+</body>
+</html>
